@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Stack from "@mui/material/Stack";
-import LinearProgress from "@mui/material/LinearProgress";
+import { Stack, LinearProgress } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Title from "../components/typographs/Title";
 import { CustomNoRowsOverlay } from "../components/datagrid/NoRowOverlay";
@@ -48,7 +47,6 @@ export default function Citizens() {
       fetchInitialData();
     }
   }, []);
-
   useEffect(() => {
     if (data.length && !data[(pageNumber + 1) * pageSize]?.someNote) {
       updatedData();

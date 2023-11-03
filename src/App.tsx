@@ -23,8 +23,8 @@ import Citizens from "./pages/citizens";
 import Add from "./pages/add";
 import { AppDispatch, AppState } from "./redux/store";
 import { CitizensServices } from "./redux/slices/citizens";
-import { address } from "./utils/constants";
 import { decodeLogsToCitizens, getNoteByIdRange } from "./utils/web3";
+import { address } from "./constants/contract";
 import FETestTaskABI from "./abis/FETestTask .json";
 
 import "./App.css";
