@@ -51,7 +51,7 @@ export default function Citizens() {
     if (data.length && !data[(pageNumber + 1) * pageSize]?.someNote) {
       updatedData();
     }
-  }, [pageNumber, pageSize, data]);
+  }, [pageNumber, pageSize]);
 
   async function fetchInitialData() {
     setLoading(true);
