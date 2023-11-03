@@ -8,8 +8,8 @@ import {
 } from "viem";
 import { sepolia } from "viem/chains";
 import _ from "lodash";
-import { address, eventInitFromBlocks } from "./constants";
 import { Citizen } from "../types/citizen";
+import { address, eventInitFromBlocks } from "../constants/contract";
 import FETestTaskABI from "../abis/FETestTask .json";
 
 const publicClient = createPublicClient({

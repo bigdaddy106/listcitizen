@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import { Stack, TextField, Button } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import AddIcon from "@mui/icons-material/Add";
 import { useForm } from "react-hook-form";
@@ -9,10 +7,10 @@ import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContractWrite, useWaitForTransaction } from "wagmi";
 import Title from "../components/typographs/Title";
-import { address } from "../utils/constants";
-import { AddCitizenForm } from "../types/citizen";
-import FETestTaskABI from "../abis/FETestTask .json";
 import Alert from "../components/modals/Alert";
+import { AddCitizenForm } from "../types/citizen";
+import { address } from "../constants/contract";
+import FETestTaskABI from "../abis/FETestTask .json";
 
 const addCitizenFormSchema = Yup.object().shape({
   age: Yup.number()
@@ -61,7 +59,7 @@ export default function Add() {
   }
 
   return (
-    <div style={{}}>
+    <div>
       <Title>Add a Citizen</Title>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack spacing={4} maxWidth={400} m="auto">
